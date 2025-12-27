@@ -18,7 +18,8 @@ const App = () => {
   const { isAuthenticated, role } = useSelector(state => state.auth);
 
   return (
-    <Router>
+    // <Router>
+    <Router basename="/Working-Space-with-redux">
       <Routes>
         <Route path="/login" element={!isAuthenticated ? <Login /> : <Navigate to="/dashboard" />} />
          <Route path="/register" element={!isAuthenticated ? <RegisterForm /> : <Navigate to="/dashboard" />} />
