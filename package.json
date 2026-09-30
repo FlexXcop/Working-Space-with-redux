@@ -5,8 +5,10 @@
   "scripts": {
     "start": "vite",
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/copy-pages-fallback.cjs",
+    "test": "node scripts/check-routing.cjs",
     "preview": "vite preview",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
